@@ -1,0 +1,196 @@
+
+01, -64, 00:3A:98:2C:59:A0,  itpsandbox
+02, -66, 1C:E8:5D:CA:E5:F5,  nyuguest-legacy
+03, -66, 1C:E8:5D:CA:E5:F4,  eduroam
+04, -66, 1C:E8:5D:CA:E5:F2,  nyu-legacy
+05, -67, 00:3A:98:2B:FD:00,  itpsandbox
+06, -73, 1C:E8:5D:CA:DD:B4,  eduroam
+07, -74, 1C:E8:5D:CA:55:32,  nyu-legacy
+08, -74, 44:1C:A8:B5:8E:AA,  WIFIB58EA6
+09, -74, 1C:E8:5D:CA:DD:B2,  nyu-legacy
+10, -75, 1C:E8:5D:CA:07:22,  nyu-legacy
+11, -75, 08:3E:0C:E7:8D:90,  NYU_LL
+12, -75, 1C:E8:5D:CA:55:35,  nyuguest-legacy
+13, -75, 1C:E8:5D:CA:55:34,  eduroam
+14, -76, E4:F4:C6:0F:A3:CC,  Safe House #7
+15, -76, 1C:E8:5D:CA:07:25,  nyuguest-legacy
+16, -76, 1C:E8:5D:CA:07:24,  eduroam
+17, -77, D8:D7:75:8B:B5:96,  MySpectrumWiFi90-2G
+18, -77, 3C:7A:8A:79:03:88,  ARRIS-038A
+19, -78, EC:0E:C4:78:4B:B4,  WIFI784BB1
+20, -78, AC:B3:13:78:EA:00,  Jackie C Internet
+21, -78, 1C:E8:5D:CA:F3:C5,  nyuguest-legacy
+22, -79, 1C:E8:5D:CA:F3:C2,  nyu-legacy
+23, -79, 1C:E8:5D:CA:58:02,  nyu-legacy
+24, -79, 48:00:33:5E:A5:74,  GGGGGGGG
+25, -79, 40:70:09:58:5D:00,  arisoup
+26, -80, 5C:8F:E0:52:A6:A8,  Gunjan
+27, -80, 44:1C:A8:D4:7B:7D,  DG1670AC2
+28, -82, D8:D7:75:95:CD:B6,  MySpectrumWiFib0-2G
+29, -82, 9C:34:26:43:C4:E8,  DDJS
+30, -82, 1C:E8:5D:CA:58:04,  eduroam
+31, -82, 5C:8F:E0:55:12:A0,  BradLindseyFritz 
+32, -82, 1C:E8:5D:CA:57:55,  nyuguest-legacy
+33, -83, A8:A7:95:F1:FC:3B,  Shinilmiami
+34, -83, 1C:E8:5D:CA:57:54,  eduroam
+35, -84, 18:D6:C7:3F:16:F9,  WirelessPUPS
+36, -84, 28:56:5A:CB:ED:28,  SIARETTAP
+37, -85, B8:EE:0E:AD:92:AA,  MySpectrumWiFia4-2G
+38, -85, C0:C5:22:4E:11:70,  Two Girls, One Router
+39, -85, 44:1C:A8:B9:AC:6E,  WIFIB9AC6B
+40, -85, C0:56:27:23:8D:07,  pinewire
+41, -86, 30:F7:72:97:90:9B,  Don't Use my Wifi
+42, -86, 3C:7A:8A:7F:B5:48,  The 300
+43, -87, 9C:34:26:AC:BC:20,  ARRIS-BC22
+44, -87, A8:A7:95:FC:18:37,  WIFIFC1834
+45, -88, 3C:7A:8A:7F:E4:E0,  ARRIS-E4E2
+46, -88, 90:72:40:15:5D:F6,  Julia/ Ann's Wi-Fi Network
+47, -88, D0:B2:C4:3E:4E:02,  Mark Shaw
+48, -88, E0:46:9A:51:BE:EB,  ADK's Web
+49, -89, 9C:34:26:4A:2A:78,  Dands
+50, -89, E8:ED:05:5B:0D:D0,  TG1672GD2
+51, -89, A8:A7:95:FC:0F:EB,  WIFIFC0FE8
+52, -89, 5C:8F:E0:51:EA:70,  ARRIS-EA72
+53, -90, 00:3A:98:36:82:70,  itpsandbox
+54, -90, 30:F7:72:8D:17:64,  Sophie
+55, -90, A0:2B:B8:6D:F8:45,  HP-Print-45-Officejet Pro 8610
+56, -90, 5C:8F:E0:28:09:10,  BatCave
+57, -90, EC:0E:C4:78:55:A4,  WIFI7855A1
+58, -90, 10:DA:43:EA:D1:0C,  NETGEAR68
+59, -91, A8:A7:95:F4:19:EF,  Phil's Wireless
+60, -91, 40:B8:9A:EF:89:8A,  bluehaze-2.4G
+61, -91, 54:13:79:F2:2F:7D,  BANJI
+62, -91, C2:56:27:07:42:D2,  Linksys10140-guest
+
+01, -62, 00:3A:98:2C:59:A0,  itpsandbox
+02, -66, 1C:E8:5D:CA:E5:F2,  nyu-legacy
+03, -66, 1C:E8:5D:CA:E5:F4,  eduroam
+04, -66, 00:3A:98:2B:FD:00,  itpsandbox
+05, -68, 1C:E8:5D:CA:55:32,  nyu-legacy
+06, -70, 1C:E8:5D:CA:55:35,  nyuguest-legacy
+07, -73, 1C:E8:5D:CA:54:A5,  nyuguest-legacy
+08, -74, 1C:E8:5D:CA:DD:B4,  eduroam
+09, -74, 1C:E8:5D:CA:54:A4,  eduroam
+10, -74, 1C:E8:5D:CA:07:22,  nyu-legacy
+11, -74, 1C:E8:5D:CA:DD:B2,  nyu-legacy
+12, -74, 1C:E8:5D:CA:54:A2,  nyu-legacy
+13, -75, 44:1C:A8:B5:8E:AA,  WIFIB58EA6
+14, -75, 1C:E8:5D:CA:07:25,  nyuguest-legacy
+15, -75, 1C:E8:5D:CA:07:24,  eduroam
+16, -76, 54:13:79:E4:A0:DB,  TC8717T24
+17, -76, 98:6B:3D:C6:6E:00,  farah
+18, -77, AC:B3:13:78:EA:00,  Jackie C Internet
+19, -77, 9C:34:26:AC:A5:20,  ARRIS-A522
+20, -77, 42:B8:9A:C0:21:09,  DIRECT-09-HP M252 LaserJet
+21, -77, 54:13:79:FC:26:78,  Cameron's House
+22, -78, 1C:E8:5D:CA:F3:C2,  nyu-legacy
+23, -78, EC:0E:C4:78:4B:B4,  WIFI784BB1
+24, -78, 1C:E8:5D:CA:F3:C5,  nyuguest-legacy
+25, -79, 92:3B:AD:11:7E:7D,  srepperson33
+26, -79, 1C:E8:5D:CA:F3:C4,  eduroam
+27, -80, 08:3E:0C:E7:8D:90,  NYU_LL
+28, -80, E4:F4:C6:0F:A3:CC,  Safe House #7
+29, -80, 5C:8F:E0:52:A6:A8,  Gunjan
+30, -80, C4:8E:8F:E3:55:D5,  Dean
+31, -80, 58:6D:8F:4D:71:DE,  Cisco9I
+32, -81, 1C:E8:5D:CA:57:55,  nyuguest-legacy
+33, -81, 3C:7A:8A:78:F9:A0,  poppy
+34, -81, D8:0F:99:B8:A5:90,  RBARR
+35, -81, 44:1C:A8:D4:7B:7D,  DG1670AC2
+36, -82, 5C:8F:E0:55:12:A0,  BradLindseyFritz 
+37, -82, 1C:E8:5D:CA:58:02,  nyu-legacy
+38, -82, 48:00:33:5E:A5:74,  GGGGGGGG
+39, -82, 1C:E8:5D:CA:57:54,  eduroam
+40, -82, 00:21:29:87:1D:FB,  bluebusi
+41, -83, 30:F7:72:9A:46:EB,  mayur
+42, -84, A8:A7:95:F1:FC:3B,  Shinilmiami
+43, -84, 30:F7:72:97:90:9B,  Don't Use my Wifi
+44, -84, 9C:34:26:43:C4:E8,  DDJS
+45, -84, D8:D7:75:95:CD:B6,  MySpectrumWiFib0-2G
+46, -85, 9C:34:26:AE:22:E0,  LJB-01
+47, -85, 54:13:79:F6:B3:02,  WIFIF6B2FE
+48, -86, C2:56:27:07:42:D2,  Linksys10140-guest
+49, -86, 3C:7A:8A:7F:B5:48,  The 300
+50, -87, B8:EE:0E:AD:92:AA,  MySpectrumWiFia4-2G
+51, -87, 30:8D:99:84:05:88,  HP-Print-88-Officejet 4630
+52, -88, EC:0E:C4:78:55:A4,  WIFI7855A1
+53, -88, 70:F1:96:BC:4C:47,  janeswireless
+54, -88, 04:A1:51:28:16:80,  HARBINGER
+55, -88, D0:B2:C4:3E:4E:02,  Mark Shaw
+56, -88, 3C:7A:8A:7F:E4:E0,  ARRIS-E4E2
+57, -89, 5C:8F:E0:51:EA:70,  ARRIS-EA72
+58, -89, A8:A7:95:FC:0F:EB,  WIFIFC0FE8
+59, -89, B4:75:0E:C5:D7:5A,  Cisco2005
+60, -89, 30:F7:72:8D:17:64,  Sophie
+61, -89, A8:A7:95:F4:19:EF,  Phil's Wireless
+62, -89, 5C:8F:E0:28:09:10,  BatCave
+63, -90, 20:0C:C8:01:F5:72,  Minerva
+64, -91, 20:4E:7F:2F:E3:E2,  avanti
+65, -91, 10:DA:43:16:61:62,  NETGEAR32
+66, -91, 9C:34:26:4A:2A:78,  Dands
+67, -92, C0:56:27:07:42:D2,  Linksys10140
+68, -93, 44:94:FC:A0:87:1F,  smf13
+
+01, -62, 00:3A:98:2C:59:A0,  itpsandbox
+02, -68, 1C:E8:5D:CA:E5:F4,  eduroam
+03, -72, 1C:E8:5D:CA:07:25,  nyuguest-legacy
+04, -72, 1C:E8:5D:CA:07:24,  eduroam
+05, -72, 00:3A:98:2B:FD:00,  itpsandbox
+06, -73, 1C:E8:5D:CA:54:A2,  nyu-legacy
+07, -73, 1C:E8:5D:CA:55:34,  eduroam
+08, -73, 1C:E8:5D:CA:55:32,  nyu-legacy
+09, -74, 1C:E8:5D:CA:54:A5,  nyuguest-legacy
+10, -76, 1C:E8:5D:CA:DD:B4,  eduroam
+11, -76, 1C:E8:5D:CA:07:22,  nyu-legacy
+12, -76, 44:1C:A8:D4:7B:7D,  DG1670AC2
+13, -78, 40:70:09:58:5D:00,  arisoup
+14, -78, 98:6B:3D:C6:6E:00,  farah
+15, -78, 1C:E8:5D:CA:F3:C5,  nyuguest-legacy
+16, -78, EC:0E:C4:78:4B:B4,  WIFI784BB1
+17, -78, 1C:E8:5D:CA:58:05,  nyuguest-legacy
+18, -79, 44:1C:A8:B5:8E:AA,  WIFIB58EA6
+19, -79, 68:14:01:B0:66:18,  gskhome
+20, -79, 54:13:79:F7:8B:E6,  10Jboys
+21, -79, E4:F4:C6:0F:A3:CC,  Safe House #7
+22, -80, 30:F7:72:9A:46:EB,  mayur
+23, -80, AC:B3:13:78:EA:00,  Jackie C Internet
+24, -80, 42:B8:9A:C0:21:09,  DIRECT-09-HP M252 LaserJet
+25, -80, D8:0F:99:B8:A5:90,  RBARR
+26, -80, 1C:E8:5D:CA:F3:C4,  eduroam
+27, -80, 5C:8F:E0:52:A6:A8,  Gunjan
+28, -81, 1C:E8:5D:CA:58:04,  eduroam
+29, -81, 92:3B:AD:11:7E:7D,  srepperson33
+30, -81, 3C:7A:8A:79:03:88,  ARRIS-038A
+31, -81, A8:A7:95:F1:FC:3B,  Shinilmiami
+32, -81, C0:C5:22:4E:11:70,  Two Girls, One Router
+33, -82, 1C:E8:5D:CA:4D:C2,  nyu-legacy
+34, -82, D8:D7:75:95:CD:B6,  MySpectrumWiFib0-2G
+35, -82, 1C:E8:5D:CA:4D:C5,  nyuguest-legacy
+36, -83, 1C:E8:5D:CA:E3:B5,  nyuguest-legacy
+37, -83, 30:F7:72:97:90:9B,  Don't Use my Wifi
+38, -84, 9C:34:26:AE:22:E0,  LJB-01
+39, -84, 9C:34:26:43:C4:E8,  DDJS
+40, -85, 3C:7A:8A:75:77:58,  ARRIS-775A
+41, -85, 3C:7A:8A:7F:B5:48,  The 300
+42, -86, 3C:7A:8A:78:F9:A0,  poppy
+43, -86, 5C:8F:E0:51:EA:70,  ARRIS-EA72
+44, -86, 9C:34:26:4A:2A:78,  Dands
+45, -86, B8:EE:0E:AD:92:AA,  MySpectrumWiFia4-2G
+46, -86, A0:2B:B8:6D:F8:45,  HP-Print-45-Officejet Pro 8610
+47, -86, 3C:7A:8A:7F:B4:68,  15J
+48, -87, 04:A1:51:28:16:80,  HARBINGER
+49, -87, A8:A7:95:F4:19:EF,  Phil's Wireless
+50, -87, C0:C5:22:4A:4D:B8,  ARRIS-4DBA
+51, -88, E0:46:9A:51:BE:EB,  ADK's Web
+52, -88, 30:8D:99:84:05:88,  HP-Print-88-Officejet 4630
+53, -88, C2:56:27:07:42:D2,  Linksys10140-guest
+54, -89, A8:A7:95:FC:0F:EB,  WIFIFC0FE8
+55, -89, 44:1C:A8:B9:AC:6E,  WIFIB9AC6B
+56, -89, 3C:7A:8A:7F:E4:E0,  ARRIS-E4E2
+57, -89, 8A:2A:A8:03:A6:8D,  Andrew-2G
+58, -89, D8:EB:97:2A:F5:2C,  offnet
+59, -89, C0:56:27:07:42:D2,  Linksys10140
+60, -90, 68:14:01:AA:EC:F2,  dinkis88
+61, -90, A0:39:EE:6E:0D:CE,  Call Me Daddy
+62, -92, 94:53:30:E6:9C:2D,  Skynet
+63, -94, 30:F7:72:8D:17:64,  Sophie
