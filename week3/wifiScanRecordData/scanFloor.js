@@ -1,18 +1,30 @@
+// Include modules
 var csv = require("fast-csv");
 var express = require('express');
 const app = express();
 var mongo = require('mongojs');
 var config = require('./config.js');
 var fs = require('fs');
-// console.log(config);
-
 var db = mongo(config.username+":"+config.userpass+"@ds131698.mlab.com:31698/floorwifimap", ["firstSweep"]);
 
+// Global variables
 var mapWidth = 1379;
 var mapHeight = 652;
 
+// SSIDs > -45
 // var ssids = [ ' 00:3A:98:2C:59:A0',' 00:3A:98:2B:FD:00',' 1C:E8:5D:CA:55:32',' 1C:E8:5D:CA:07:22',' 1C:E8:5D:CA:55:35',' 1C:E8:5D:CA:55:34',' 1C:E8:5D:CA:07:25',' 00:3A:98:36:82:70',' 1C:E8:5D:CA:54:A5',' 1C:E8:5D:CA:54:A4',' 1C:E8:5D:CA:54:A2',' 1C:E8:5D:CA:E3:B5',' 1C:E8:5D:CA:49:E4',' 1C:E8:5D:CA:49:E2',' 1C:E8:5D:CA:49:E5',' 00:3A:98:2C:66:E0',' 1C:E8:5D:CA:F4:32',' 1C:E8:5D:CA:E3:B2',' 1C:E8:5D:CA:E3:B4',' 1C:E8:5D:CA:68:34',' 1C:E8:5D:CA:68:35',' 1C:E8:5D:CA:68:32',' 1C:E8:5D:CA:EB:04',' 1C:E8:5D:CA:EB:05',' 1C:E8:5D:CA:EB:02',' 1C:E8:5D:CA:F4:A5',' 1C:E8:5D:CA:F4:A4',' 1C:E8:5D:CA:F4:A2',' 1C:E8:5D:CA:F4:34',' 1C:E8:5D:CA:F4:35' ];
+// SSIDs > -70
 var ssids = [ ' 00:3A:98:2C:59:A0', ' 1C:E8:5D:CA:E5:F5', ' 1C:E8:5D:CA:E5:F4', ' 1C:E8:5D:CA:E5:F2', ' 00:3A:98:2B:FD:00', ' 1C:E8:5D:CA:DD:B4', ' 1C:E8:5D:CA:55:32', ' 1C:E8:5D:CA:DD:B2', ' 1C:E8:5D:CA:07:22', ' 1C:E8:5D:CA:55:35', ' 1C:E8:5D:CA:55:34', ' 1C:E8:5D:CA:07:25', ' 1C:E8:5D:CA:07:24', ' 1C:E8:5D:CA:F3:C5', ' 1C:E8:5D:CA:F3:C2', ' 1C:E8:5D:CA:58:02', ' 1C:E8:5D:CA:58:04', ' 1C:E8:5D:CA:57:55', ' 1C:E8:5D:CA:57:54', ' 00:3A:98:36:82:70', ' 1C:E8:5D:CA:54:A5', ' 1C:E8:5D:CA:54:A4', ' 1C:E8:5D:CA:54:A2', ' 1C:E8:5D:CA:F3:C4', ' 1C:E8:5D:CA:58:05', ' 1C:E8:5D:CA:E3:B5', ' 1C:E8:5D:CA:57:52', ' 1C:E8:5D:CA:49:E4', ' 1C:E8:5D:CA:49:E2', ' 1C:E8:5D:CA:49:E5', ' 00:3A:98:2C:66:E0', ' 1C:E8:5D:CA:F3:A4', ' 1C:E8:5D:CA:F3:A5', ' 1C:E8:5D:CA:F3:A2', ' 1C:E8:5D:CA:4B:D4', ' 1C:E8:5D:CA:F4:32', ' 1C:E8:5D:CA:C6:22', ' 1C:E8:5D:CA:E3:B2', ' 1C:E8:5D:CA:E3:B4', ' 1C:E8:5D:CA:68:34', ' 1C:E8:5D:CA:68:35', ' 1C:E8:5D:CA:EB:A2', ' 1C:E8:5D:CA:68:32', ' 1C:E8:5D:CA:4E:C5', ' 1C:E8:5D:CA:4E:C4', ' 1C:E8:5D:CA:EB:A4', ' 1C:E8:5D:CA:EB:A5', ' 1C:E8:5D:CA:EB:04', ' 1C:E8:5D:CA:EB:05', ' 1C:E8:5D:CA:EB:02', ' 1C:E8:5D:CA:BD:12', ' 1C:E8:5D:CA:BD:15', ' 1C:E8:5D:CA:BD:14', ' 1C:E8:5D:CA:F4:A5', ' 1C:E8:5D:CA:F4:A4', ' 1C:E8:5D:CA:F4:A2', ' 1C:E8:5D:CA:E2:A2', ' 1C:E8:5D:CA:F4:34', ' 1C:E8:5D:CA:E2:A4', ' 1C:E8:5D:CA:F4:35', ' 1C:E8:5D:CA:9D:54', ' 1C:E8:5D:CA:9D:52', ' 1C:E8:5D:CA:E2:A5', ' 1C:E8:5D:CA:BC:D5', ' 1C:E8:5D:CA:BC:D2', ' 1C:E8:5D:CA:BC:D4', ' 1C:E8:5D:CA:9D:55', ' 1C:E8:5D:CA:F2:F5', ' 1C:E8:5D:CA:F2:F2', ' 1C:E8:5D:CA:F2:F4', ' 38:ED:18:2C:26:D2', ' 1C:E8:5D:CA:C6:24', ' 1C:E8:5D:CA:C6:25', ' 1C:E8:5D:CA:C2:B4', ' 1C:E8:5D:CA:C2:B5' ] ;
+var buf = [];
+var curX, curY;
+var mappedPointList =[];
+var rssis = [], rssiVal = -99; //rssi of ssids -99 to 0
+
+var SerialPort = require('serialport');
+var port = new SerialPort('COM16', {
+	baudRate: 115200
+});
+
 
 var mappedPoint = function(x, y, rssis){
 	this.x = x;
@@ -21,20 +33,13 @@ var mappedPoint = function(x, y, rssis){
 	this.pos = x+y*mapWidth;
 }
 
-var mappedPointList =[];
-
-var rssis = []; //rssi of ssids -999 to 0
-for(var i=0; i<ssids.length; i++){
-	rssis.push(-999);
+function initializeRSSI(){
+	rssis = [];
+	for(var i=0; i<ssids.length; i++){
+		rssis.push(rssiVal);
+	}	
 }
-
-var buf = [];
-var curX, curY;
-
-var SerialPort = require('serialport');
-var port = new SerialPort('COM16', {
-	baudRate: 115200
-});
+initializeRSSI();
 
 function getRSSIs(x, y){
 	curX = x;
@@ -43,24 +48,23 @@ function getRSSIs(x, y){
 		if (err) {
 			return console.log('Error on write: ', err.message);
 		}
-		console.log('message written');
+		console.log('Coordinates received. Processing...');
 	})
 }
-
 
 port.on('error', function(err) {
 	console.log('Error: ', err.message);
 })
 
+//  
 port.on('readable', function () {
-	// console.log("poop");
 	csv.fromString(String(port.read())).on("data", function(data){
 		// console.log(data);		
 		var index = ssids.indexOf(data[2]);
 		if(index != -1){			
 			rssis[index] = Number(data[1]);
 		}
-		if(data[0] == '#'){		
+		if(data[0] == '#'){					
 			var newPoint = new mappedPoint(curX, curY, rssis);	
 			mappedPointList.push(newPoint);
 			// console.log(mappedPointList);
@@ -76,10 +80,7 @@ port.on('readable', function () {
 			//  // success case, the file was saved
 			//  console.log('Lyric saved!');
 			// });
-			rssis = [];
-			for(var i=0; i<ssids.length; i++){
-				rssis.push(-999);
-			}
+			initializeRSSI();
 		}
 	})
 	.on("end", function(){
@@ -88,14 +89,6 @@ port.on('readable', function () {
 		// console.log(rssis);
 	});
 });
-
-function dist(a, b){
-	var dist = 0;
-	for(int i=0; i< a.rssis.length; i++){
-		if()		
-	}
-	console.log(dist);
-}
 
 app.get('/', function(req, res){
 	res.send('x:'+req.query.x+' y:'+req.query.y);
