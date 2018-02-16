@@ -6,7 +6,7 @@ This repositiory is documentation for [Connected Devices Spring-2018]()
 
 ![landingPage](https://i.imgur.com/6NrUbRX.png)
 
-I made an HTML puzzle with express. The puzzle is live [here](http://as11613.itp.io:8080). Give it a shot!
+I made an HTML puzzle with expressjs. The puzzle is live [here](http://as11613.itp.io:8080). Give it a shot!
 
 There are multilple levels and you proceed by various methods, like manipulations URLs, finding hidden links, and solving riddles to get passwords.
 
@@ -18,7 +18,17 @@ I used nodejs library [get-image-colors](https://www.npmjs.com/package/get-image
 
 ## Week 3
 
+![Rssis](https://i.imgur.com/Dyhqvkf.png)
+
 This week I made a Wifi scanner using ESP8266. I am currently implementing it to map RSSI of various routers on the college floor. I expect this heat map can then be used to extract indoor position via nearest neighbor mapping of RSSI. 
+
+![Floor Scan](https://i.imgur.com/fbCbOuf.png)
+
+Locations of scanned ares.
+
+![code](https://i.imgur.com/qnkTU0r.png)
+
+The backend server gets location as mouse X and Y coordinated on a mousePress event. This can readily be converted to indoor location or mapped to the same map without needing to triangulate.
 
 ## Week 4
 
