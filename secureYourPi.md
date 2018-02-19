@@ -124,7 +124,7 @@ Reference:
 
 Tripwire is a tool that analysis sytstem files and reports if any files have been modified by an attacker. This protects you from becoming part of a botnet, say. Tripwire requires a different passphrase from the user password to be modified. So even an attacker with root access cannot bypass it without deleting it outright which will be apparant to me as well. So this pretty much ensures that if someone modifies my system I get to know about it. I followed the instructions by [DigitalOcean community](https://www.digitalocean.com/community/tutorials/how-to-use-tripwire-to-detect-server-intrusions-on-an-ubuntu-vps)
 
-##### Important tripwire commands:
+#### Important tripwire commands:
 
 Re-Initialize tripwire(e.g. after changing the database):
 	
@@ -146,7 +146,7 @@ Change when tripwire is executed(it is executed via cron in my case):
 Tripwire sends a daily report to my email. Setting up terminal email
 I followed this excellent guide: https://easyengine.io/tutorials/linux/ubuntu-postfix-gmail-smtp/
 
-##### Important mail commands:
+#### Important mail commands:
 	
 Change email address and password used:
 	
@@ -160,7 +160,7 @@ I wanted to use snort to monitor network traffic, but was advised against it fro
 
 I used digitalocean community [tutorial](https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04) for setting up fail2ban.
 
-##### Important fail2ban commands:
+#### Important fail2ban commands:
 
 Edit jail file:
 
