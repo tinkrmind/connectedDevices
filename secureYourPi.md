@@ -122,14 +122,56 @@ Reference:
 ---
 ### Setup Intrusion detection
 
-Tripwire is a tool that analysis sytstem files and reports if any files have been modified by an attacker. This protects you from becoming part of a botnet, say. Tripwire requires a different passphrase from the user password to be modified. So even an attacker with root access cannot bypass it without deleting it outright which will be apparant to me as well. So this pretty much ensures that if someone modifies my system I get to know about it.
+Tripwire is a tool that analysis sytstem files and reports if any files have been modified by an attacker. This protects you from becoming part of a botnet, say. Tripwire requires a different passphrase from the user password to be modified. So even an attacker with root access cannot bypass it without deleting it outright which will be apparant to me as well. So this pretty much ensures that if someone modifies my system I get to know about it. I followed the instructions by [DigitalOcean community](https://www.digitalocean.com/community/tutorials/how-to-use-tripwire-to-detect-server-intrusions-on-an-ubuntu-vps)
 
-I followed the instructions by [DigitalOcean community](https://www.digitalocean.com/community/tutorials/how-to-use-tripwire-to-detect-server-intrusions-on-an-ubuntu-vps)
+##### Important tripwire commands:
+
+Re-Initialize tripwire(e.g. after changing the database):
+	
+	sudo tripwire --init
+
+Check system status:
+	
+	sudo tripwire --check
+
+
+"okay" software changes so they don't trip a response:
+
+	sudo tripwire --check --interactive
+
+Change when tripwire is executed(it is executed via cron in my case):
+	
+	crontab -e
 
 Tripwire sends a daily report to my email. Setting up terminal email
 I followed this excellent guide: https://easyengine.io/tutorials/linux/ubuntu-postfix-gmail-smtp/
 
+##### Important mail commands:
+	
+Change email address and password used:
+	
+	sudo nano /etc/postfix/asal_passwd
+
+Restart postfix(the mail smtp client):
+	
+	sudo /etc/init.d/postfix reload
+
 I wanted to use snort to monitor network traffic, but was advised against it from [this](https://security.stackexchange.com/questions/163013/can-snort-run-on-a-raspberry-pi) thread, the main reason being that the pi zero does not have enough RAM and processing power to run snort. I chose instead to go with fail2ban which is [recommended](https://www.raspberrypi.org/documentation/configuration/security.md#Fail2ban) for rasbberry pi's.
 
 I used digitalocean community [tutorial](https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04) for setting up fail2ban.
- 
+
+##### Important fail2ban commands:
+
+Edit jail file:
+
+	sudo nano /etc/fail2ban/jail.local
+
+Start fail2ban
+
+	sudo service fail2ban start
+
+Stop fail2ban
+
+	sudo service fail2ban stop
+
+---
