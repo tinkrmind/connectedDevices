@@ -15,8 +15,8 @@ The itp image has default username itp. If you want to change, it does not do to
 #### What does work:
 The best way I found was to make a new super user(call it user2), then change the old username(user1) when logged in as user2 via
 
-	usermod -l newname oldname
-	usermod -m -d /home/newname newname
+	$ usermod -l newname oldname
+	$ usermod -m -d /home/newname newname
 
 Then log in as user1 (now renamed) and delete user2.
 
@@ -29,7 +29,7 @@ https://itp.nyu.edu/networks/tutorials/setting-up-a-raspberry-pi/
 
 Your default image comes with many deamons which appear as users. I don't know if it is possible for them to login through ssh, but better safe than sorry. The following code will allow only authorized users to access the pi via ssh:
 
-	sudo nano /etc/ssh/sshd_config
+	$ sudo nano /etc/ssh/sshd_config
 
 Add this to EOF:
 
@@ -37,7 +37,7 @@ Add this to EOF:
 
 Exit nano by typing Ctrl+X, save and restart ssh:
 
-	sudo systemctl restart ssh
+	$ sudo systemctl restart ssh
 
 ##### Reference: 
 https://www.makeuseof.com/tag/raspberry-pi-safe-secure/ 
@@ -94,7 +94,7 @@ The edited file should look like:
 
 I used [Uncomplicated Firewall(UFW)](https://wiki.ubuntu.com/UncomplicatedFirewall) to configure my firewall. It's a wrapper in IP Tables and comes by default on many UNIX distributions. Check if you already have ufw by typing the following:
 
-	ufw --version
+	$ ufw --version
 
 You should get a result like:
 
@@ -103,11 +103,11 @@ You should get a result like:
 
 If it's not installed you can install it by typing:
 
-	sudo apt install ufw
+	$ sudo apt install ufw
 
 As soon as it's installed it might want to enable itself with the default settings which may lock you out if you're logged in via ssh. To prevent it from doing so, type:
 
-	sudo ufw disable
+	$ sudo ufw disable
 
 Now to set up the rules:
 
@@ -135,20 +135,20 @@ Tripwire is a tool that analysis sytstem files and reports if any files have bee
 
 Re-Initialize tripwire(e.g. after changing the database):
 	
-	sudo tripwire --init
+	$ sudo tripwire --init
 
 Check system status:
 	
-	sudo tripwire --check
+	$ sudo tripwire --check
 
 
 "okay" software changes so they don't trip a response:
 
-	sudo tripwire --check --interactive
+	$ sudo tripwire --check --interactive
 
 Change when tripwire is executed(it is executed via cron in my case):
 	
-	crontab -e
+	$ crontab -e
 
 Tripwire sends a daily report to my email. Setting up terminal email
 I followed this excellent guide: https://easyengine.io/tutorials/linux/ubuntu-postfix-gmail-smtp/
@@ -157,15 +157,15 @@ I followed this excellent guide: https://easyengine.io/tutorials/linux/ubuntu-po
 	
 Change email address and password used:
 	
-	sudo nano /etc/postfix/asal_passwd
+	$ sudo nano /etc/postfix/asal_passwd
 
 Restart postfix(the mail smtp client):
 	
-	sudo /etc/init.d/postfix reload
+	$ sudo /etc/init.d/postfix reload
 
 Send mail from terminal
 
-	echo 'Test stuff' | mailx -s 'Test email' tinkrmind@gmail.com
+	$ echo 'Test stuff' | mailx -s 'Test email' tinkrmind@gmail.com
 
 I wanted to use snort to monitor network traffic, but was advised against it from [this](https://security.stackexchange.com/questions/163013/can-snort-run-on-a-raspberry-pi) thread, the main reason being that the pi zero does not have enough RAM and processing power to run snort. I chose instead to go with fail2ban which is [recommended](https://www.raspberrypi.org/documentation/configuration/security.md#Fail2ban) for rasbberry pi's.
 
@@ -177,14 +177,14 @@ The best tutorial I found on fail2ban was again from the [DigitalOcean Community
 
 Edit jail file:
 
-	sudo nano /etc/fail2ban/jail.local
+	$ sudo nano /etc/fail2ban/jail.local
 
 Start fail2ba
 	sudo service fail2ban start
 
 Stop fail2ban
 
-	sudo service fail2ban stop
+	$ sudo service fail2ban stop
 
 ##### fail2ban fail!
 
