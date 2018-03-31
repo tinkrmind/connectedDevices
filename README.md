@@ -1,6 +1,6 @@
 # connected devices
 
-This repositiory is documentation for [Connected Devices Spring-2018]()
+This repositiory is documentation for [Connected Devices Spring-2018](https://itp.nyu.edu/classes/connected-devices/)
 
 ## Week 1
 
